@@ -1,0 +1,26 @@
+# Core framework
+fastapi==0.121.1
+uvicorn[standard]==0.38.0
+python-multipart==0.0.9  # Required for file uploads in FastAPI
+
+# Machine Learning & Deep Learning
+tensorflow==2.20.0
+torch==2.9.0
+sentence-transformers==5.1.2
+
+# Audio Processing
+librosa==0.11.0
+soundfile==0.13.1
+scipy==1.15.3
+numpy==2.2.6
+
+# Whisper (speech-to-text)
+openai-whisper==20250625
+faster-whisper==1.2.1
+
+# Visualization & Reporting
+matplotlib==3.10.7
+reportlab==4.4.4
+
+# Optional utilities
+tqdm==4.67.1
