@@ -21,6 +21,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
 from PIL import Image
+from fastapi.middleware.cors import CORSMiddleware
 
 # Import utils
 from app.utils import (
@@ -64,6 +65,15 @@ app = FastAPI(
         "The system returns a prediction and generates a detailed graphical PDF report."
     ),
     version="2.1"
+)
+
+# Enable CORS (allow all origins for development)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow your React frontend
+    allow_credentials=True,
+    allow_methods=["*"],  # allow GET, POST, etc.
+    allow_headers=["*"],  # allow all headers
 )
 
 _last_report_path = None  # cleared on each new prediction
