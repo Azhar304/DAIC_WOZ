@@ -1,0 +1,1 @@
+Research project on depression using daic woz dataset and analyzing audio thrrough 2d-CNN and lstm and transcripts through Nlp. At the end fuse both model to provide results on persons depression details and levels if depression( if depressed)
